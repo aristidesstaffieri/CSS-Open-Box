@@ -1,0 +1,175 @@
+@font-face {
+    font-family: 'CargoCrate';
+    src: url('CARGC__.TTF');
+}
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.container {
+perspective: 500;
+perspective-origin: 50% -150px;
+}
+.box {
+  width:100px;
+  height:100px;
+  position:relative;
+  margin: 180px auto;
+  -webkit-transform-style:preserve-3d;
+  -moz-transform-style:preserve-3d;
+  -ms-transform-style:preserve-3d;
+  -o-transform-style:preserve-3d;
+  transform-style:preserve-3d;
+}
+.box:hover {
+    -webkit-animation: spin 3s infinite linear;
+    -moz-animation: spin 3s infinite linear;
+    -ms-animation: spin 3s infinite linear;
+    -o-animation: spin 3s infinite linear;
+    animation: spin 3s infinite linear;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+.side {
+  width:100px;
+  height:100px;
+  background: #c3834c;
+  border:1px solid #000;
+  position:absolute;
+}
+.side-1 {
+  width:100px;
+  height:100px;
+  position:absolute;
+  -webkit-transform: rotateX(90deg) translateZ(50px);
+  -moz-transform: rotateX(90deg) translateZ(50px);
+  -ms-transform: rotateX(90deg) translateZ(50px);
+  -o-transform: rotateX(90deg) translateZ(50px);
+  transform: rotateX(90deg) translateZ(50px);
+  -webkit-transform-style:preserve-3d;
+  -moz-transform-style:preserve-3d;
+  -ms-transform-style:preserve-3d;
+  -o-transform-style:preserve-3d;
+  transform-style:preserve-3d;
+}
+
+.side-2 {
+  -webkit-transform: translateZ(50px);
+  -moz-transform: translateZ(50px);
+  -ms-transform: translateZ(50px);
+  -o-transform: translateZ(50px);
+  transform: translateZ(50px);
+  font-family: 'CargoCrate', serif;
+  line-height: 30px;
+  font-size:14px;
+  text-align:center;
+  color: #663300;
+}
+
+.side-3 {
+  -webkit-transform: rotateY(90deg) translateZ(50px);
+  -moz-transform: rotateY(90deg) translateZ(50px);
+  -ms-transform: rotateY(90deg) translateZ(50px);
+  -o-transform: rotateY(90deg) translateZ(50px);
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.side-4 {
+  -webkit-transform: rotateX(-90deg) rotate(180deg) translateZ(50px);
+  -moz-transform: rotateX(-90deg) rotate(180deg) translateZ(50px);
+  -ms-transform: rotateX(-90deg) rotate(180deg) translateZ(50px);
+  -o-transform: rotateX(-90deg) rotate(180deg) translateZ(50px);
+  transform: rotateX(-90deg) rotate(180deg) translateZ(50px);
+}
+
+.side-5 {
+  -webkit-transform: rotateY(180deg) translateZ(50px);
+  -moz-transform: rotateY(180deg) translateZ(50px);
+  -ms-transform: rotateY(180deg) translateZ(50px);
+  -o-transform: rotateY(180deg) translateZ(50px);
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.side-6 {
+  -webkit-transform: rotateY(-90deg) translateZ(50px);
+  -moz-transform: rotateY(-90deg) translateZ(50px);
+  -ms-transform: rotateY(-90deg) translateZ(50px);
+  -o-transform: rotateY(-90deg) translateZ(50px);
+  transform: rotateY(-90deg) translateZ(50px);
+}
+.inner-side { 
+  -webkit-transition: 1s all linear;
+  -moz-transition: 1s all linear;
+  -ms-transition: 1s all linear;
+  -o-transition: 1s all linear;
+  transition: 1s all linear;
+}
+
+.flap-1, .flap-2 {
+  width:100px;
+  height:50px; 
+}
+
+.flap-1 {
+  top:50px;
+  -webkit-transform-origin:0px 50px;
+  -moz-transform-origin:0px 50px;
+  -ms-transform-origin:0px 50px;
+  -o-transform-origin:0px 50px;
+  transform-origin:0px 50px;
+}
+
+.flap-2 {
+  -webkit-transform-origin:100px 0px;
+  -moz-transform-origin:100px 0px;
+  -ms-transform-origin:100px 0px;
+  -o-transform-origin:100px 0px;
+  transform-origin:100px 0px;
+}
+.box:hover .flap-1 {
+  -webkit-transform: rotateX(-120deg);
+  -moz-transform: rotateX(-120deg);
+  -ms-transform: rotateX(-120deg);
+  -o-transform: rotateX(-120deg);
+  transform: rotateX(-120deg);
+}
+
+.box:hover .flap-2 {
+  -webkit-transform: rotateX(120deg);
+  -moz-transform: rotateX(120deg);
+  -ms-transform: rotateX(120deg);
+  -o-transform: rotateX(120deg);
+  transform: rotateX(120deg);
+}
+i.fa.fa-glass {
+font-size: 25px;
+margin-top: 20px;
+color: #000;
+}
+
+@-webkit-keyframes spin {
+  to {-webkit-transform: rotateY(360deg);}
+}
+@-moz-keyframes spin {
+  to { -moz-transform: rotateY(360deg); }
+}
+@-ms-keyframes spin {
+  to { -ms-transform: rotateY(360deg); }
+}
+@-o-keyframes spin {
+  to { -o-transform: rotateY(360deg); }
+}
+@keyframes spin {
+  to { transform: rotateY(360deg); }
+}
